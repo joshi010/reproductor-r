@@ -1,38 +1,91 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+html,body{
   min-height: 100vh;
+  background: rgb(11,37,90);
+  background: linear-gradient(35deg, rgba(11,37,90,1) 0%, rgba(0,0,0,1) 97%);
+}
+
+.grid-default-album{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 300px));
+  gap: 10px;
+}
+
+.navLink{
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.link-react{
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-album{
+  display: grid;
+  grid-template-rows: 80% 20%;
+  overflow: hidden;
+  box-sizing: border-box;
+  background-color: rgb(240, 248, 255);
+  border-radius: 8px;
+  text-align: center;
+  height: 300px;
+}
+
+.image-container{
+  overflow: hidden;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.image-container img{
+  height: 100%;
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.album-description{
+  padding: 5px;
+}
+
+.margins{
+  margin: 0 auto;
+  width: 90%;
+}
+
+@media only screen and (max-width: 802px){
+  .grid-default-album{
+    grid-template-columns: repeat(auto-fill, minmax(200px, 200px));
   }
-  to {
-    transform: rotate(360deg);
+
+  .card-album{
+    height: 200px;
   }
+
+  .album-description{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .album-description h2{
+    font-size: 20px;
+  }
+
+  .album-description p {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 692px){
+  .grid-default-album{
+    grid-template-columns: repeat(2, 50%);
+  }
+
 }

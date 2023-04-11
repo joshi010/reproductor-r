@@ -1,19 +1,19 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Alabanzas CDO",
+  "name": "Alabanzas CDO",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "https://yt3.googleusercontent.com/ytc/AL5GRJVS2qMtpjbV-BaTBvkYQIO0l-XX1sblA8rv1oVhOg=s900-c-k-c0x00ffffff-no-rj",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "https://yt3.googleusercontent.com/ytc/AL5GRJVS2qMtpjbV-BaTBvkYQIO0l-XX1sblA8rv1oVhOg=s900-c-k-c0x00ffffff-no-rj",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "https://yt3.googleusercontent.com/ytc/AL5GRJVS2qMtpjbV-BaTBvkYQIO0l-XX1sblA8rv1oVhOg=s900-c-k-c0x00ffffff-no-rj",
       "type": "image/png",
       "sizes": "512x512"
     }

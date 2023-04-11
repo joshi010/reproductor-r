@@ -15,12 +15,6 @@ export default function Reproductor(){
         }
     }
 
-    // const handleNext = () => {
-    //     const currentIndex = infoCopy.findIndex((song) => song.audio === play.audio);
-    //     const nextIndex = currentIndex === infoCopy.length - 1 ? 0 : currentIndex + 1;
-    //     const nextSong = infoCopy[nextIndex];
-    //     handlePlay(nextSong);
-    // };
       
     return(
         <div id="reproductor-cont">
@@ -33,20 +27,27 @@ export default function Reproductor(){
                             <p>Casa de Oración</p>
                         </div>
                         <div id="controllers-container">
-                            <div className="controls">
-                            {'<<'}
-                            </div>
                             <div className="bar-container" onClick={togglePause}>
-                                <div className="bar">
+                                {
+                                    istrue ? (
+                                        <>
+                                            <div className="triangle-container">
+                                                <div className="triangle">
 
-                                </div>
-                                <div className="bar">
+                                                </div>
+                                            </div>
+                                        </>
+                                    ) : (
+                                            <>
+                                                <div className="bar">
 
-                                </div>
-                            </div>
-                                
-                            <div className="controls">
-                            {'>>'}
+                                                </div>
+                                                <div className="bar">
+
+                                                </div>
+                                            </>
+                                        )
+                                }
                             </div>
                         </div>
                         </>

@@ -10,12 +10,24 @@ const elVolvera = [
         audio: 'volveras.wav'
     },
     {
-        title: 'Juventud',
+        title: 'Acuérdate de tu Creador',
         audio: 'acuerdate.wav'
     },
     {
         title: 'Ven Señor Jesús',
         audio: 'ven-señor.wav'
+    },
+    {
+        title: 'Este Mundo No Es Mi Hogar',
+        audio: 'no-es-mi-hogar.wav'
+    },
+    {
+        title: 'Mi Deleite',
+        audio: 'mi-deleite.wav'
+    },
+    {
+        title: 'Tu Voz Desde Los Cielos',
+        audio: 'tu-voz.wav'
     }
 
 ]

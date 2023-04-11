@@ -2,9 +2,10 @@ import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router";
 import './album.css';
 import { CurrentSongContext } from "../../App";
+import { Helmet } from "react-helmet";
 
 export default function Album(props){
-    const { updateCurrentSong, setPlay, play } = useContext(CurrentSongContext);
+    const { updateCurrentSong, setPlay, play, currentSong } = useContext(CurrentSongContext);
     const params = useParams();
     const [ info, setInfo ] = useState();
     const [infoCopy, setInfoCopy ] = useState(null);
@@ -61,13 +62,20 @@ export default function Album(props){
 
     return(
         <div className="margins bottom-lel">
+            <Helmet>
+                <title>
+                    {currentSong ? currentSong.title + ' • Alabanza' : info ? info[0].title + ' • Albúm' : 'Álbumes de Alabanza Casa de Oración México'}
+                </title>
+            </Helmet>
             <div id="heading">
-                <div>
-                    <img src={info ? info[0].image : 'loading'}/>
+                <div className="image-album-playlist-container">
+                    <img src={info ? info[0].image ? info[0].image : './images/default-image.png' : 'Cargando...'}/>
                 </div>
                 <div id="lel">
-                    <h1>{info ? info[0].title : 'Loading'}</h1>
-                    <p>{info ? info[0].det : 'Loading'}</p>
+                    <div>
+                        <h1>{info ? info[0].title : 'Cargando...'}</h1>
+                        <p>Albúm • {info ? info[0].det : 'Cargando...'}</p>
+                    </div>
 
                 </div>
             </div>

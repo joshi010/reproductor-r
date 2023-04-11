@@ -6,8 +6,8 @@
 
 html,body{
   min-height: 100vh;
-  background: rgb(11,37,90);
-  background: linear-gradient(35deg, rgba(11,37,90,1) 0%, rgba(0,0,0,1) 97%);
+  background: #071739;
+  background: linear-gradient(35deg, #071739 0%, rgba(0,0,0,1) 97%);
 }
 
 .grid-default-album{

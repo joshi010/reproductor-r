@@ -4,8 +4,10 @@
     gap: 10px;
 }
 
-#lel{
+#lel {
     padding: 10px 0;
+    display: flex;
+    align-items: center;
 }
 
 #container{
@@ -36,8 +38,8 @@
     width: 100%;
     display: flex;
     box-sizing: border-box;
-    height: 80px;
-    padding: 5px 10px 20px;
+    height: 90px;
+    padding: 0px 10px 25px;
     position: fixed;
     bottom: 0;
     color: #ffffffa8;
@@ -62,19 +64,46 @@
 
 .bar{
     background-color: #ffffffa8;
-    height: 18px;
-    width: 6px;
+    height: 26px;
+    width: 10px;
 }
 
 .bar-container{
     display: flex;
-    gap: 2px;
+    gap: 4px;
     cursor: pointer;
 }
 
 .controls{
     cursor: pointer;
-    font-size: 20px;
+    font-size: 34px;
+}
+
+.image-album-playlist-container{
+    width: 336px;
+    height: 188px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.triangle-container{
+    overflow: hidden;
+    height: 26px;
+    width: 26px;
+}
+
+.triangle {
+    background-color: #ffffffa8;
+    height: 90%;
+    width: 90%;
+    transform: rotateZ(40deg);
+    transform-origin: 16% -12%;
+}
+
+.bottom-lel{
+    height: fit-content;
+    padding-bottom: 135px;
 }
 
 @media only screen and (max-width: 620px) {
@@ -89,7 +118,4 @@
       padding: 0 20px;
     }
 
-    #container{
-        margin-bottom: 100px;
-    }
   }

@@ -8,7 +8,7 @@ export default function AlbumList(){
         {   
             albumData.map((album, i) => {
                 return(
-                    <Link className="link-react" title={album.title} to={album.slug}>
+                    <Link key={i} className="link-react" title={album.title} to={album.slug}>
                         <div className="card-album" key={i}>
                             <div className="image-container">
                                 <img src={album.image ? album.image : './images/default-image.png'} />

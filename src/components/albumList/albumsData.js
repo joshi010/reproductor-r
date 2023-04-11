@@ -5,6 +5,11 @@ export const albumData = [
         slug: 'el-volvera',
         date: 2023
     },
+    {
+        title: 'Pruebas',
+        slug: 'pruebas',
+        date: 2023
+    }
 ];
 
 

@@ -7,27 +7,27 @@ const elVolvera = [
     },
     {
         title: 'Volverás',
-        audio: 'volveras.wav'
+        audio: 'volveras.flac'
     },
     {
         title: 'Acuérdate de tu Creador',
-        audio: 'acuerdate.wav'
+        audio: 'acuerdate.flac'
     },
     {
         title: 'Ven Señor Jesús',
-        audio: 'ven-señor.wav'
+        audio: 'ven-señor.flac'
     },
     {
         title: 'Este Mundo No Es Mi Hogar',
-        audio: 'no-es-mi-hogar.wav'
+        audio: 'no-es-mi-hogar.flac'
     },
     {
         title: 'Mi Deleite',
-        audio: 'mi-deleite.wav'
+        audio: 'mi-deleite.flac'
     },
     {
         title: 'Tu Voz Desde Los Cielos',
-        audio: 'tu-voz.wav'
+        audio: 'tu-voz.flac'
     }
 
 ]

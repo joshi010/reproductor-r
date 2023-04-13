@@ -28,16 +28,18 @@ export default function Album(props){
         }
       }, [info]);
 
-
+      const builder = 'https://raw.githubusercontent.com/joshi010/betterstepsvideos/main/audios/';
       const handleClick =  (e) => async () => 
       {
-
-          const audioFilePath = await import(`./albums-data/${params.album}/${e.audio}`);
-          const audio = new Audio(audioFilePath.default);
-          const context = new AudioContext({
-            latencyHint: "interactive",
-            sampleRate: 44100,
-          });
+        const response = await fetch(builder + e.audio);
+        const data = await response.arrayBuffer();
+        const blob = new Blob([data], { type: response.headers.get('Content-Type') });
+        const audio = new Audio(URL.createObjectURL(blob));
+      
+        const context = new AudioContext({
+          latencyHint: "interactive",
+          sampleRate: 44100,
+        });
           const source = context.createMediaElementSource(audio);
           source.connect(context.destination);
 

@@ -28,37 +28,39 @@ export default function Album(props){
         }
       }, [info]);
 
+
       const handleClick =  (e) => async () => 
-        {
+      {
 
-            const audioFilePath = await import(`./albums-data/${params.album}/${e.audio}`);
-            const audio = new Audio(audioFilePath.default);
-            const context = new AudioContext({
-                sampleRate: 48000,
-            });
-            const source = context.createMediaElementSource(audio);
-            source.connect(context.destination);
+          const audioFilePath = await import(`./albums-data/${params.album}/${e.audio}`);
+          const audio = new Audio(audioFilePath.default);
+          const context = new AudioContext({
+            latencyHint: "interactive",
+            sampleRate: 44100,
+          });
+          const source = context.createMediaElementSource(audio);
+          source.connect(context.destination);
 
-            audio.addEventListener('ended', () => {
-                setInfoCopy((infoCopy) => {
-                  const currentIndex = infoCopy.findIndex((song) => song.audio === e.audio);
-                  const nextIndex = currentIndex === infoCopy.length - 1 ? 0 : currentIndex + 1;
-                  const nextSong = infoCopy[nextIndex];
-                  console.log(nextSong);
-                  handleClick(nextSong)();
-                  return infoCopy;
-                });
+          audio.addEventListener('ended', () => {
+              setInfoCopy((infoCopy) => {
+                const currentIndex = infoCopy.findIndex((song) => song.audio === e.audio);
+                const nextIndex = currentIndex === infoCopy.length - 1 ? 0 : currentIndex + 1;
+                const nextSong = infoCopy[nextIndex];
+                console.log(nextSong);
+                handleClick(nextSong)();
+                return infoCopy;
               });
-              
-              if(play){
-                play.pause();
-                play.currentTime = 0;
-              }
+            });
+            
+            if(play){
+              play.pause();
+              play.currentTime = 0;
+            }
 
-              updateCurrentSong(e);
-              setPlay(audio);
-              audio.play();
-            };
+            updateCurrentSong(e);
+            setPlay(audio);
+            audio.play();
+      };
 
     return(
         <div className="margins bottom-lel">

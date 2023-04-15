@@ -19,18 +19,31 @@
     flex-direction: column;
 }
 
+.music-card-1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 40px;
+    transition: all 0.5s;
+    color: #ffffffcc;
+}
+
+.icon{
+    height: 100%;
+    cursor: pointer;
+}
+
 .music-card{
     height: 100px;
     display: flex;
     gap: 10px;
     align-items: center;
-    padding: 0 10px;
+    padding-left:10px;
+    width: 95%;
     cursor: pointer;
-    transition: all 0.5s;
-    color: #ffffffcc;
 }
 
-.music-card:hover{
+.music-card-1:hover{
     background-color: rgb(121, 158, 190);
 }
 
@@ -85,6 +98,7 @@
     overflow: hidden;
     display: flex;
     justify-content: center;
+    background: linear-gradient(35deg, #071739 0%, rgba(105, 105, 105, 0.644) 97%);
 }
 
 .triangle-container{
@@ -112,10 +126,22 @@
       justify-content: center;
       text-align: center;
     }
+
+    .music-card-1{
+        padding-right: 15px;
+    }
   
     .music-card{
       gap: 20px;
       padding: 0 20px;
+    }
+
+    .music-card-1:hover{
+        background-color: unset;
+    }
+
+    .music-card-1:active{
+        background-color: rgb(121, 158, 190);
     }
 
   }

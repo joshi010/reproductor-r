@@ -1,25 +1,36 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import './landing.css';
 import AlbumList from "../albumList/AlbumList";
-import Playlist from "../playList/Playlists";
+import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
 
 export default function Landing(){
 
-
     return(
-        <div className="margins center">
+        <div className="margins bottom-lel center">
             <Helmet>
                 <title>Alabanzas Casa de Oración México</title>
             </Helmet>
+            <h1>Álbumes</h1>
             <div className="grid-default-album">
                 <AlbumList />
             </div>
+
             <div id="second">
-                <h2>Playlists</h2>
-                <div>
-                    <Playlist />
+                <h1>Favoritos</h1>
+                <div className="grid-default-album">
+                    <Link className="link-react" title={'Me gusta'} to={'/favorites'}>
+                        <div className="card-album">
+                            <div className="image-container">
+                                <img style={{scale:'0.5'}} src={'https://cdn-icons-png.flaticon.com/512/9576/9576640.png'} />
+                            </div>
+                            <div className="album-description">
+                                <h2 style={{color:'#000'}}>Me gustan</h2>
+                                <p></p>
+                            </div>
+                        </div>
+                    </Link>
                 </div>
             </div>
         </div>

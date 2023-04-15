@@ -31,7 +31,24 @@ function App() {
   return element;
 }
 
+
+
 function AppWithRouter(){
+  const [favorites, setFavorites ] = useState([{title: 'Canciones que te gustan', image: 'https://cdn-icons-png.flaticon.com/512/9576/9576640.png'}])
+  const [i, setI] = useState(0);
+
+  useEffect(() => {
+      if(i === 0){
+          const store = localStorage.getItem('favorites');
+          if(store){
+              setFavorites(JSON.parse(store));
+          } else {
+              localStorage.setItem('favorites', JSON.stringify([...favorites]));
+          }
+      }
+      setI(prev => prev + 1)
+  }, [favorites]);
+  
   const [currentSong, setCurrentSong] = useState(null);
   const [ play, setPlay ] = useState(null);
   const updateCurrentSong = (song) => {

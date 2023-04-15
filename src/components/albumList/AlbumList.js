@@ -14,7 +14,7 @@ export default function AlbumList(){
                                 <img src={album.image ? album.image : './images/default-image.png'} />
                             </div>
                             <div className="album-description">
-                                <h2>{album.title}</h2>
+                                <h2 style={{color:'#000'}}>{album.title}</h2>
                                 <p>{album.date}</p>
                             </div>
                         </div>

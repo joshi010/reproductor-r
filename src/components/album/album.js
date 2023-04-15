@@ -11,7 +11,7 @@ export default function Album(){
     const [infoCopy, setInfoCopy ] = useState(null);
 
     useEffect(() => {
-        if(params.album == 'favorites') {
+        if(params.album === 'favorites') {
             const store = localStorage.getItem('favorites');
             setInfo(JSON.parse(store));
         } else {
@@ -44,7 +44,6 @@ export default function Album(){
         const audio = new Audio(URL.createObjectURL(blob));
       
         const context = new AudioContext({
-          latencyHint: "interactive",
           sampleRate: 44100,
         });
           const source = context.createMediaElementSource(audio);
@@ -129,7 +128,7 @@ export default function Album(){
                                     </div>
                                     <div>
                                         <h2>{lel.title}</h2>
-                                        <p>Casa de Oración</p>
+                                        <p>{info[0].title}</p>
                                     </div>
                                 </div>
                                 <div className="icon" onClick={handleFaveRemove(lel)}>

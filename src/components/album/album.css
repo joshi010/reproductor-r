@@ -51,10 +51,11 @@
     width: 100%;
     display: flex;
     box-sizing: border-box;
-    height: 90px;
-    padding: 0px 10px 25px;
+    height: 60px;
+    padding: 10px 25px;
+    align-items: center;
     position: fixed;
-    bottom: 0;
+    bottom: 90px;
     color: #ffffffa8;
     background-color: #01050c;
 }
@@ -142,6 +143,10 @@
 
     .music-card-1:active{
         background-color: rgb(121, 158, 190);
+    }
+
+    #reproductor-cont{
+        bottom: 83px;
     }
 
   }

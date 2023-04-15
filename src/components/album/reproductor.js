@@ -17,43 +17,51 @@ export default function Reproductor(){
 
       
     return(
-        <div id="reproductor-cont">
-            <div className="margins flex">
-                {
-                    currentSong && (
-                        <>
-                        <div style={{display:'flex', justifyContent:'center', flexDirection:'column'}}>
-                            <h3 id="song-title-repr">{currentSong.title}</h3>
-                            <p>Casa de Oración</p>
-                        </div>
-                        <div id="controllers-container">
-                            <div className="bar-container" onClick={togglePause}>
-                                {
-                                    istrue ? (
-                                        <>
-                                            <div className="triangle-container">
-                                                <div className="triangle">
+        <>
+        {
+            currentSong && (
+                <div id="reproductor-cont">
+                    <div className="margins flex">
+                        {
+                            currentSong && (
+                                <>
+                                <div style={{display:'flex', justifyContent:'center', flexDirection:'column'}}>
+                                    <h3 id="song-title-repr">{currentSong.title}</h3>
+                                    <p>{currentSong.album}</p>
+                                </div>
+                                <div id="controllers-container">
+                                    <div className="bar-container" onClick={togglePause}>
+                                        {
+                                            istrue ? (
+                                                <>
+                                                    <div className="triangle-container">
+                                                        <div className="triangle">
+        
+                                                        </div>
+                                                    </div>
+                                                </>
+                                            ) : (
+                                                    <>
+                                                        <div className="bar">
+        
+                                                        </div>
+                                                        <div className="bar">
+        
+                                                        </div>
+                                                    </>
+                                                )
+                                        }
+                                    </div>
+                                </div>
+                                </>
+                            )
+                        }
+                    </div>
+                </div>
+    
+            )
 
-                                                </div>
-                                            </div>
-                                        </>
-                                    ) : (
-                                            <>
-                                                <div className="bar">
-
-                                                </div>
-                                                <div className="bar">
-
-                                                </div>
-                                            </>
-                                        )
-                                }
-                            </div>
-                        </div>
-                        </>
-                    )
-                }
-            </div>
-        </div>
+        }
+        </>
     )
 }

@@ -5,14 +5,19 @@ import Nav from './components/nav/nav';
 import Reproductor from './components/album/reproductor';
 const Landing = lazy(() => import('./components/landing/landing'));
 const Album = lazy(() => import('./components/album/album'));
+const Albumes = lazy(() => import('./components/albumes/albumes'));
 const routes = [
   {
     path: '/',
     element: <Landing />
   },
   {
-    path: '/:album',
+    path: '/albumes/:album',
     element: <Album />
+  },
+  {
+    path: '/albumes',
+    element: <Albumes />
   }
 ];
 
@@ -58,10 +63,10 @@ function AppWithRouter(){
   return(
     <CurrentSongContext.Provider value={{ currentSong, updateCurrentSong, play, setPlay}}>
       <Router>
-        <Nav />
         <Suspense>
           <App />
         </Suspense>
+        <Nav />
         <Reproductor />
       </Router>
     </CurrentSongContext.Provider>

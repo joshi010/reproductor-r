@@ -7,27 +7,33 @@ const elVolvera = [
     },
     {
         title: 'Volverás',
-        audio: 'volveras'
+        audio: 'volveras',
+        album: 'Él Volverá',
     },
     {
         title: 'Acuérdate de tu Creador',
-        audio: 'acuerdate'
+        audio: 'acuerdate',
+        album: 'Él Volverá',
     },
     {
         title: 'Ven Señor Jesús',
-        audio: 'ven-señor'
+        audio: 'ven-señor',
+        album: 'Él Volverá',
     },
     {
         title: 'Este Mundo No Es Mi Hogar',
-        audio: 'no-es-mi-hogar'
+        audio: 'no-es-mi-hogar',
+        album: 'Él Volverá',
     },
     {
         title: 'Mi Deleite',
-        audio: 'mi-deleite'
+        audio: 'mi-deleite',
+        album: 'Él Volverá',
     },
     {
         title: 'Tu Voz Desde Los Cielos',
-        audio: 'tu-voz'
+        audio: 'tu-voz',
+        album: 'Él Volverá',
     }
 
 ]

@@ -14,11 +14,16 @@ h1{
   color: aliceblue;
 }
 
-.grid-default-album{
+.title-landing{
+  margin-bottom: 10px;
+}
+
+.grid-default-album, .grid-default-album-landing{
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 300px));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 250px));
   gap: 10px;
 }
+
 
 .navLink{
   text-decoration: none;
@@ -38,7 +43,7 @@ h1{
   background-color: rgb(240, 248, 255);
   border-radius: 8px;
   text-align: center;
-  height: 300px;
+  height: 250px;
 }
 
 .image-container{
@@ -60,13 +65,20 @@ h1{
 }
 
 .margins{
-  margin: 0 auto;
+  margin: 30px auto;
   width: 90%;
 }
 
-@media only screen and (max-width: 802px){
+@media only screen and (max-width: 1024px){
   .grid-default-album{
-    grid-template-columns: repeat(auto-fill, minmax(200px, 200px));
+    grid-template-columns: repeat(auto-fill, 200px);
+  }
+
+  .grid-default-album-landing{
+    overflow: scroll;
+    grid-template-columns: repeat(4, 200px);
+    align-content: center;
+    justify-items: center;
   }
 
   .card-album{
@@ -89,8 +101,20 @@ h1{
 }
 
 @media only screen and (max-width: 692px){
+  .grid-default-album-landing{
+    overflow: scroll;
+    grid-template-columns: repeat(4, 48%);
+    align-content: center;
+    justify-items: center;
+  }
+
   .grid-default-album{
-    grid-template-columns: repeat(2, 50%);
+    grid-template-columns: repeat(auto-fill, 48%);
+    justify-content: center;
+  }
+
+  .card-album{
+    height: 170px;
   }
 
   .margins{
